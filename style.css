@@ -301,26 +301,7 @@ h3.my-profession{
     text-align: center;
     position: relative;
 }
-.home-img::after{
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-bottom:10px solid var(--skin-color);
-    border-right:10px solid var(--skin-color);
-    right: 30px;
-    bottom: -40px;
-}
-.home-img::before{
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-top:10px solid var(--skin-color);
-    border-left:10px solid var(--skin-color);
-    left: 30px;
-    top: -40px;
-}
+
 .home .home-img img {
     height: 300px;
     margin: auto;
@@ -449,28 +430,28 @@ h3.my-profession{
     width: 100%;
     display: block;
 }
+.sertikom-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 kolom */
+  gap: 20px;
+  align-items: center;
+}
+
+
+.sertikom-left, .sertikom-right {
+  display: flex;
+  justify-content: center;
+}
+
+.sertikom-left img, 
+.sertikom-right img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
 
 @media(max-width:1250px){
-    .home-img::after{
-        content: '';
-        position: absolute;
-        height: 80px;
-        width: 80px;
-        border-bottom:10px solid var(--skin-color);
-        border-right:10px solid var(--skin-color);
-        right: 0px;
-        bottom: -30px;
-    }
-    .home-img::before{
-        content: '';
-        position: absolute;
-        height: 80px;
-        width: 80px;
-        border-top:10px solid var(--skin-color);
-        border-left:10px solid var(--skin-color);
-        left: 0px;
-        top: -30px;
-    }
+
 }
 @media (max-width:1199px){
     .aside{
@@ -532,8 +513,6 @@ h3.my-profession{
     .home-info p{
         font-size: 20px;
     }
-    .home .home-img {
-    }
     .home .home-info{
         flex: 0 0 100%;
         max-width: 1-0;  
@@ -542,31 +521,7 @@ h3.my-profession{
         flex: 0 0 100%;
         max-width: 50% ;
     }
-    .home-img::after{
-        content: '';
-        position: absolute;
-        height: 80px;
-        width: 80px;
-        border-bottom:10px solid var(--skin-color);
-        border-right:10px solid var(--skin-color);
-        right: -10px;
-        bottom: -30px;
-        transform: scale(1.25);
-        display: none;
 
-    }
-    .home-img::before{
-        content: '';
-        position: absolute;
-        height: 80px;
-        width: 80px;
-        border-top:10px solid var(--skin-color);
-        border-left:10px solid var(--skin-color);
-        left: -10px;
-        top: -30px;
-        display: none;
-
-    }
 }
 @media (max-width:767px){
     .portofolio .portofolio-item,
