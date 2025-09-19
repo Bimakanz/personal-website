@@ -1,27 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- FILE CSS -->
-     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="color1.css">     
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-     <link rel="stylesheet" href="style-switcher.css">
-     <link rel="stylesheet" href="color1.css" class="alternate-style" title="color1" disabled>
-     <link rel="stylesheet" href="color2.css" class="alternate-style" title="color2" disabled>
-     <link rel="stylesheet" href="color3.css" class="alternate-style" title="color3" disabled>
-     <link rel="stylesheet" href="color4.css" class="alternate-style" title="color4">
-     <link rel="stylesheet" href="color5.css" class="alternate-style" title="color5" disabled>
-<link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="color1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style-switcher.css">
+    <link rel="stylesheet" href="color1.css" class="alternate-style" title="color1" disabled>
+    <link rel="stylesheet" href="color2.css" class="alternate-style" title="color2" disabled>
+    <link rel="stylesheet" href="color3.css" class="alternate-style" title="color3" disabled>
+    <link rel="stylesheet" href="color4.css" class="alternate-style" title="color4">
+    <link rel="stylesheet" href="color5.css" class="alternate-style" title="color5" disabled>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
+<style>
+    .slider-container {
+        position: relative;
+        max-width: 600px;
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+        min-width: 100%;
+        transition: opacity 0.5s ease;
+    }
+
+    .slide img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 12px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    .prev:hover,
+    .next:hover {
+        background: rgba(0, 0, 0, 0.8);
+    }
+</style>
+
 <body>
 
     <!-- Container Pertama Start -->
-     <div class="container-utama">
-         <!-- ASIDE  -->
-          <div class="aside">
+    <div class="container-utama">
+        <!-- ASIDE  -->
+        <div class="aside">
             <div class="logo">
                 <a href="#"><span>B</span>ima</a>
             </div>
@@ -29,87 +84,92 @@
                 <span></span>
             </div>
             <ul class="nav">
-                <li> <a href="#home" class="active"> <i class= "fa fa-home"></i> Beranda </a> </li>
-                <li> <a href="#about"> <i class= "fa fa-user"></i>Tentang</a> </li>
-                <li> <a href="#porto"> <i class= "fa fa-briefcase"></i>Portofolio</a> </li>
-                <li> <a href="https://api.whatsapp.com/send/?phone=6285771006786&text&type=phone_number&app_absent=0"> <i class= "fa fa-comments"></i>Contact</a> </li>
+                <li> <a href="#home" class="active"> <i class="fa fa-home"></i> Beranda </a> </li>
+                <li> <a href="#about"> <i class="fa fa-user"></i>Tentang</a> </li>
+                <li> <a href="#porto"> <i class="fa fa-briefcase"></i>Portofolio</a> </li>
+                <li> <a href="#sertifikat"> <i class="fa fa-certificate"></i>Sertifikat</a> </li>
+                <li> <a href="https://api.whatsapp.com/send/?phone=6285771006786&text&type=phone_number&app_absent=0">
+                        <i class="fa fa-comments"></i>Contact</a> </li>
             </ul>
-          </div>
-          <!-- ASIDE -->
-         <!-- CONTENT UTAMA -->
-          <div class="content-utama">
+        </div>
+        <!-- ASIDE -->
+        <!-- CONTENT UTAMA -->
+        <div class="content-utama">
             <!-- Home Section -->
-             <section class="home section" id="home">
+            <section class="home section" id="home">
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
                             <h3 class="hello">Hi, Aku Gue <span class="name">Bimasena</span></h3>
                             <h3 class="my-profession"> Aku adalah <span class="typing-text">Web Designer</span></h3>
-                            <p>Aku adalah siswa kelas 10 Jurusan RPL di SMK Informatika Pesat Bogor, lahir di Kota Bogor jam 8 Malem, bayar pake BPJS, Bulan Mei gue dilahirkan ke dunia yang kejam ini, dengan kelahiran gw saat nya hancur dunia ini sudah diujung jari. </p>
+                            <p>Aku adalah siswa kelas 10 Jurusan RPL di SMK Informatika Pesat Bogor, lahir di Kota Bogor
+                                jam 8 Malem, bayar pake BPJS, Bulan Mei gue dilahirkan ke dunia yang kejam ini, dengan
+                                kelahiran gw saat nya hancur dunia ini sudah diujung jari. </p>
                         </div>
-                        <div class="home-img padd-15"> 
+                        <div class="home-img padd-15">
                             <img src="bimasena.JPG" alt="">
                         </div>
                     </div>
                 </div>
-             </section>
-             <!-- Container Pertama End -->
-             <!-- About Section Start -->
-       <section class="about section" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="section-title padd-15">
-                    <h2>About Me</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="about-content padd-15">
+            </section>
+            <!-- Container Pertama End -->
+            <!-- About Section Start -->
+            <section class="about section" id="about">
+                <div class="container">
                     <div class="row">
-                        <div class="about-text padd-15">
-                            <h3>Aku Bimasena Wiryaatmaja Yusuf <span>X RPL</span></h3>
-                            <p>Halo, Nama ku Bimasena Wiryaatmaja Yusuf <br>
-                                Hobi : Gaming, Cycling, Nunggu Sabtu <br>
-                                Bahasa pemrograman Yang di pahami : PHP <br>
-                            </p>
+                        <div class="section-title padd-15">
+                            <h2>About Me</h2>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="personal-info padd-15">
+                        <div class="about-content padd-15">
                             <div class="row">
-                                <div class="info-item padd-15">
-                                    <p>Tanggal Lahir : <span>28 Mei 2009</span></p>
-                                </div>
-                                <div class="info-item padd-15">
-                                    <p>Umur : <span>16 Tahun</span></p>
-                                </div>
-                                <div class="info-item padd-15">
-                                    <p>Jurusan : <span>RPL</span></p>
-                                </div>
-                                <div class="info-item padd-15">
-                                    <p>Email : <span>bimagendut1928</span></p>
-                                </div>
-                                <div class="info-item padd-15">
-                                    <p>Nomor : <span>0857-7100-6786</span></p>
-                                </div>
-                                <div class="info-item padd-15">
-                                    <p>Alamat : <span>Kota Bogor</span></p>
+                                <div class="about-text padd-15">
+                                    <h3>Aku Bimasena Wiryaatmaja Yusuf <span>X RPL</span></h3>
+                                    <p>Halo, Nama ku Bimasena Wiryaatmaja Yusuf <br>
+                                        Hobi : Gaming, Cycling, Nunggu Sabtu <br>
+                                        Bahasa pemrograman Yang di pahami : PHP <br>
+                                    </p>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="buttons padd-15">
-                                    <a href="https://github.com/Bimakanz" class="btn" target="_blank">GIT HUB</a>
+                                <div class="personal-info padd-15">
+                                    <div class="row">
+                                        <div class="info-item padd-15">
+                                            <p>Tanggal Lahir : <span>28 Mei 2009</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Umur : <span>16 Tahun</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Jurusan : <span>RPL</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Email : <span>bimagendut1928</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Nomor : <span>0857-7100-6786</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Alamat : <span>Kota Bogor</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="buttons padd-15">
+                                            <a href="https://github.com/Bimakanz" class="btn" target="_blank">GIT
+                                                HUB</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-       </section>
-             <!-- About Section  End -->
-              <!-- Portofolio Start -->
-               <section class="portofolio section" id="porto">
-                 <div class="container">
+            </section>
+            <!-- About Section  End -->
+            <!-- Portofolio Start -->
+            <section class="portofolio section" id="porto">
+                <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
                             <h2>Portofolio</h2>
@@ -122,105 +182,138 @@
                     </div>
                     <div class="row">
                         <!-- Portofolio item Start -->
-                         <div class="portofolio-item padd-15">
+                        <div class="portofolio-item padd-15">
                             <div class="portofolio-item-inner shadow-dark">
                                 <div class="portofolio-img">
-                                   <a href="https://bimakanz.github.io/Modul-5-Penerapan-Bootstrap-2-Study-Kasus-Wedding-Invitation/" target="_blank"><img src="portofolio-1.png" alt=""></a>
+                                    <a href="https://bimakanz.github.io/Modul-5-Penerapan-Bootstrap-2-Study-Kasus-Wedding-Invitation/"
+                                        target="_blank"><img src="portofolio-1.png" alt=""></a>
                                 </div>
                             </div>
-                         </div>
-                         <div class="portofolio-item padd-15">
+                        </div>
+                        <div class="portofolio-item padd-15">
                             <div class="portofolio-item-inner shadow-dark">
                                 <div class="portofolio-img">
-                                  <a href="https://bimakanz.github.io/Modul-4-Penerapan-Bootstrap-Web-Portofolio/" target="_blank"><img src="portofolio-2.png"  alt=""></a>
+                                    <a href="https://bimakanz.github.io/Modul-4-Penerapan-Bootstrap-Web-Portofolio/"
+                                        target="_blank"><img src="portofolio-2.png" alt=""></a>
                                 </div>
                             </div>
-                         </div>
-                         <div class="portofolio-item padd-15">
+                        </div>
+                        <div class="portofolio-item padd-15">
                             <div class="portofolio-item-inner shadow-dark">
                                 <div class="portofolio-img">
-                                   <a href=""></a> <img src="portofolio-3.png" alt="">
+                                    <a href=""></a> <img src="portofolio-3.png" alt="">
                                 </div>
                             </div>
-                         </div>
-                         <div class="portofolio-item padd-15">
+                        </div>
+                        <div class="portofolio-item padd-15">
                             <div class="portofolio-item-inner shadow-dark">
                                 <div class="portofolio-img">
-                                  <a href="https://techeduca-one.vercel.app/" target="_blank">  <img src="Tugas.png" height="200px" alt=""></a>
+                                    <a href="https://techeduca-one.vercel.app/" target="_blank"> <img src="Tugas.png"
+                                            height="200px" alt=""></a>
                                 </div>
                             </div>
-                         </div>
-                         <div class="portofolio-item padd-15">
+                        </div>
+                        <div class="portofolio-item padd-15">
                             <div class="portofolio-item-inner shadow-dark">
                                 <div class="portofolio-img">
-                                   <a href="https://www.figma.com/proto/bpeh8zxT2qqFkMeyYAS0cf/Food-Landing-Page-UI-Design?node-id=107-857&node-type=frame&t=ETLRq2XQdiUiGc18-1&scaling=min-zoom&content-scaling=fixed&page-id=107%3A856&starting-point-node-id=107%3A857" target="_blank"> <img src="portofolio-5.png" alt=""></a>
+                                    <a href="https://www.figma.com/proto/bpeh8zxT2qqFkMeyYAS0cf/Food-Landing-Page-UI-Design?node-id=107-857&node-type=frame&t=ETLRq2XQdiUiGc18-1&scaling=min-zoom&content-scaling=fixed&page-id=107%3A856&starting-point-node-id=107%3A857"
+                                        target="_blank"> <img src="portofolio-5.png" alt=""></a>
                                 </div>
                             </div>
-                         </div>
-                         <div class="portofolio-item padd-15">
+                        </div>
+                        <div class="portofolio-item padd-15">
                             <div class="portofolio-item-inner shadow-dark">
                                 <div class="portofolio-img">
-                                    <a href="https://bimakanz.github.io/Modul-3-Hasil-Sertikom/"></a><img src="portofolio-6.png" alt="">
+                                    <a href="https://bimakanz.github.io/Modul-3-Hasil-Sertikom/" target="_blank"> <img
+                                            src="portofolio-6.png" alt=""></a>
                                 </div>
                             </div>
-                         </div>
-                         </div>
-                        <!-- Portofolio item End -->
-                         <!-- Sertifikat Kompetensi -->
-<div class="row">
-  <div class="portofolio-heading padd-15" style="margin-top:40px;">
-    <h2>Sertifikat Kompetensi :</h2>
-  </div>
-</div>
-<div class="row sertikom-row">
-  <!-- Sertifikat Kiri -->
-  <div class="portofolio-item padd-15 sertikom-left">
-    <div class="portofolio-item-inner shadow-dark">
-      <div class="portofolio-img">
-        <img src="Dipindai_20250919-0838-02.jpg" alt="Sertifikat Kompetensi 1">
-        <img src="Dipindai_20250919-0841.jpg" alt="Sertifikat Kompetensi 1">
-      </div>
-    </div>
-  </div>
-
-  <!-- Slot Tengah Kosong -->
-  <div class="sertikom-empty"></div>
-
-  <!-- Sertifikat Kanan -->
-  <div class="portofolio-item padd-15 sertikom-right">
-    <div class="portofolio-item-inner shadow-dark">
-      <div class="portofolio-img">
-        <img src="Dipindai_20250919-0843-01.jpg" alt="Sertifikat Kompetensi 2">
-        <img src="Dipindai_20250919-0843-02.jpg" alt="Sertifikat Kompetensi 2">
-      </div>
-    </div>
-  </div>
-</div>
+                        </div>
                     </div>
-                 </div>
-               </section>
-          </div>
-     </div>
-     <!-- STYLE SWITCHER -->
-     <div class="style-switcher">
-        <div class="style-switcher-toggler s-icon">
-            <i class="fas fa-cog fa-spin"></i>
-        </div>
-        <div class="day-night s-icon">
-            <i class="fas "></i>
-        </div>
-        <h4>Theme Color</h4>
-        <div class="colors">
-            <span class="color1" onclick="setActiveStyle('color1')"></span>
-            <span class="color2" onclick="setActiveStyle('color2')"></span>
-            <span class="color3" onclick="setActiveStyle('color3')"></span>
-            <span class="color4" onclick="setActiveStyle('color4')"></span>
-            <span class="color5" onclick="setActiveStyle('color5')"></span>
-        </div>
-     </div>
-    <!-- FILE JS -->
-    <script src="style-switcher.js"></script>
-    <script src="script.js"></script>
-    </script>
+            </section>
+                    <!-- Portofolio item End -->
+
+                    <!-- Sertifikat Kompetensi Start -->
+                    <section class="sertifikat section" id="sertifikat">
+                        <div class="row">
+                            <div class="section-title padd-15">
+                                <h2>Sertifikat Kompetensi</h2>
+                            </div>
+                        </div>
+
+                        <!-- Slider Container -->
+                        <div class="slider-container padd-15">
+                            <div class="slider">
+                                <div class="slide active">
+                                    <img src="Dipindai_20250919-0838-02.jpg" alt="Sertifikat 1">
+                                </div>
+                                <div class="slide">
+                                    <img src="Dipindai_20250919-0841.jpg" alt="Sertifikat 2">
+                                </div>
+                                <div class="slide">
+                                    <img src="Dipindai_20250919-0843-01.jpg" alt="Sertifikat 3">
+                                </div>
+                                <div class="slide">
+                                    <img src="Dipindai_20250919-0843-02.jpg" alt="Sertifikat 4">
+                                </div>
+                            </div>
+
+                            <!-- Navigation Buttons -->
+                            <button class="prev">&#10094;</button>
+                            <button class="next">&#10095;</button>
+                        </div>
+                    </section>
+                    <!-- Sertifikat Kompetensi End -->
+
+                    <!-- STYLE SWITCHER -->
+                    <div class="style-switcher">
+                        <div class="style-switcher-toggler s-icon">
+                            <i class="fas fa-cog fa-spin"></i>
+                        </div>
+                        <div class="day-night s-icon">
+                            <i class="fas "></i>
+                        </div>
+                        <h4>Theme Color</h4>
+                        <div class="colors">
+                            <span class="color1" onclick="setActiveStyle('color1')"></span>
+                            <span class="color2" onclick="setActiveStyle('color2')"></span>
+                            <span class="color3" onclick="setActiveStyle('color3')"></span>
+                            <span class="color4" onclick="setActiveStyle('color4')"></span>
+                            <span class="color5" onclick="setActiveStyle('color5')"></span>
+                        </div>
+                    </div>
+                    <!-- FILE JS -->
+                    <script src="style-switcher.js"></script>
+                    <script src="script.js"></script>
+                    </script>
+                    <script>
+                        const slides = document.querySelectorAll('.slide');
+                        const prev = document.querySelector('.prev');
+                        const next = document.querySelector('.next');
+                        let index = 0;
+
+                        function showSlide(n) {
+                            slides.forEach((slide, i) => {
+                                slide.style.display = (i === n) ? 'block' : 'none';
+                            });
+                        }
+
+                        function nextSlide() {
+                            index = (index + 1) % slides.length;
+                            showSlide(index);
+                        }
+
+                        function prevSlide() {
+                            index = (index - 1 + slides.length) % slides.length;
+                            showSlide(index);
+                        }
+
+                        next.addEventListener('click', nextSlide);
+                        prev.addEventListener('click', prevSlide);
+
+                        // Show first slide by default
+                        showSlide(index);
+                    </script>
 </body>
+
 </html>
