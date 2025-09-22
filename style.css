@@ -152,6 +152,11 @@ ul{
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
+.cert-item:nth-of-type(2) img,
+.cert-item:nth-of-type(4) img {
+    height: 300px; /* Ubah sesuai kebutuhan */
+    object-fit: cover; /* Agar gambar menutupi area tanpa distorsi */
+}
 
 .cert-item img:hover {
     transform: scale(1.05);
