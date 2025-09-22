@@ -231,89 +231,83 @@
                         </div>
                     </div>
             </section>
-                    <!-- Portofolio item End -->
+            <!-- Portofolio item End -->
 
-                    <!-- Sertifikat Kompetensi Start -->
-                    <section class="sertifikat section" id="sertifikat">
-                        <div class="row">
-                            <div class="section-title padd-15">
-                                <h2>Sertifikat Kompetensi</h2>
-                            </div>
-                        </div>
-
-                        <!-- Slider Container -->
-                        <div class="slider-container padd-15">
-                            <div class="slider">
-                                <div class="slide active">
-                                    <img src="Dipindai_20250919-0838-02.jpg" alt="Sertifikat 1">
-                                </div>
-                                <div class="slide">
-                                    <img src="Dipindai_20250919-0841.jpg" alt="Sertifikat 2">
-                                </div>
-                                <div class="slide">
-                                    <img src="Dipindai_20250919-0843-01.jpg" alt="Sertifikat 3">
-                                </div>
-                                <div class="slide">
-                                    <img src="Dipindai_20250919-0843-02.jpg" alt="Sertifikat 4">
-                                </div>
-                            </div>
-
-                            <!-- Navigation Buttons -->
-                            <button class="prev">&#10094;</button>
-                            <button class="next">&#10095;</button>
-                        </div>
-                    </section>
-                    <!-- Sertifikat Kompetensi End -->
-
-                    <!-- STYLE SWITCHER -->
-                    <div class="style-switcher">
-                        <div class="style-switcher-toggler s-icon">
-                            <i class="fas fa-cog fa-spin"></i>
-                        </div>
-                        <div class="day-night s-icon">
-                            <i class="fas "></i>
-                        </div>
-                        <h4>Theme Color</h4>
-                        <div class="colors">
-                            <span class="color1" onclick="setActiveStyle('color1')"></span>
-                            <span class="color2" onclick="setActiveStyle('color2')"></span>
-                            <span class="color3" onclick="setActiveStyle('color3')"></span>
-                            <span class="color4" onclick="setActiveStyle('color4')"></span>
-                            <span class="color5" onclick="setActiveStyle('color5')"></span>
-                        </div>
+            <!-- Sertifikat Kompetensi Start -->
+            <section class="sertifikat section" id="sertifikat">
+                <div class="row">
+                    <div class="section-title padd-15">
+                        <h2>Sertifikat Kompetensi</h2>
                     </div>
-                    <!-- FILE JS -->
-                    <script src="style-switcher.js"></script>
-                    <script src="script.js"></script>
-                    </script>
-                    <script>
-                        const slides = document.querySelectorAll('.slide');
-                        const prev = document.querySelector('.prev');
-                        const next = document.querySelector('.next');
-                        let index = 0;
+                </div>
 
-                        function showSlide(n) {
-                            slides.forEach((slide, i) => {
-                                slide.style.display = (i === n) ? 'block' : 'none';
-                            });
-                        }
+                <!-- Grid Gambar -->
+                <div class="certificate-grid padd-15">
+                    <div class="cert-item">
+                        <img src="Dipindai_20250919-0838-02.jpg" alt="Sertifikat 1">
+                    </div>
+                    <div class="cert-item">
+                        <img src="Dipindai_20250919-0841.jpg" alt="Sertifikat 2">
+                    </div>
+                    <div class="cert-item">
+                        <img src="Dipindai_20250919-0843-01.jpg" alt="Sertifikat 3">
+                    </div>
+                    <div class="cert-item">
+                        <img src="Dipindai_20250919-0843-02.jpg" alt="Sertifikat 4">
+                    </div>
+                </div>
+            </section>
+            <!-- Sertifikat Kompetensi End -->
 
-                        function nextSlide() {
-                            index = (index + 1) % slides.length;
-                            showSlide(index);
-                        }
+            <!-- STYLE SWITCHER -->
+            <div class="style-switcher">
+                <div class="style-switcher-toggler s-icon">
+                    <i class="fas fa-cog fa-spin"></i>
+                </div>
+                <div class="day-night s-icon">
+                    <i class="fas "></i>
+                </div>
+                <h4>Theme Color</h4>
+                <div class="colors">
+                    <span class="color1" onclick="setActiveStyle('color1')"></span>
+                    <span class="color2" onclick="setActiveStyle('color2')"></span>
+                    <span class="color3" onclick="setActiveStyle('color3')"></span>
+                    <span class="color4" onclick="setActiveStyle('color4')"></span>
+                    <span class="color5" onclick="setActiveStyle('color5')"></span>
+                </div>
+            </div>
+            <!-- FILE JS -->
+            <script src="style-switcher.js"></script>
+            <script src="script.js"></script>
+            </script>
+            <script>
+                const slides = document.querySelectorAll('.slide');
+                const prev = document.querySelector('.prev');
+                const next = document.querySelector('.next');
+                let index = 0;
 
-                        function prevSlide() {
-                            index = (index - 1 + slides.length) % slides.length;
-                            showSlide(index);
-                        }
+                function showSlide(n) {
+                    slides.forEach((slide, i) => {
+                        slide.style.display = (i === n) ? 'block' : 'none';
+                    });
+                }
 
-                        next.addEventListener('click', nextSlide);
-                        prev.addEventListener('click', prevSlide);
+                function nextSlide() {
+                    index = (index + 1) % slides.length;
+                    showSlide(index);
+                }
 
-                        // Show first slide by default
-                        showSlide(index);
-                    </script>
+                function prevSlide() {
+                    index = (index - 1 + slides.length) % slides.length;
+                    showSlide(index);
+                }
+
+                next.addEventListener('click', nextSlide);
+                prev.addEventListener('click', prevSlide);
+
+                // Show first slide by default
+                showSlide(index);
+            </script>
 </body>
 
 </html>
